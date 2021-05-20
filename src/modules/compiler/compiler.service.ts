@@ -3,7 +3,7 @@ import solc from 'solc';
 
 @Injectable()
 export class CompilerService {
-  compileContract(contractId: string) {
-    return contractId;
+  compileContract(filename: string) {
+    return filename;
   }
 }
