@@ -8,6 +8,7 @@ import { Erc20Module } from './modules/erc20/erc20.module';
 import { Erc721Module } from './modules/erc721/erc721.module';
 import { CompilerModule } from './modules/compiler/compiler.module';
 import { StatsModule } from './modules/stats/stats.module';
+import { ContractModule } from './modules/contract/contract.module';
 
 @Module({
   imports: [
@@ -24,6 +25,7 @@ import { StatsModule } from './modules/stats/stats.module';
     Erc721Module,
     CompilerModule,
     StatsModule,
+    ContractModule,
   ],
   controllers: [AppController, HealthController],
 })

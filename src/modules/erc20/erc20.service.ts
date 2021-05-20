@@ -1,16 +1,16 @@
 import { Injectable } from '@nestjs/common';
-import { outputFile, readFileSync } from 'fs-extra';
-import Handlebars from 'handlebars';
-import { nanoid } from 'nanoid';
+import { ContractService } from '../contract/contract.service';
+import { TokenType } from '../contract/interfaces/contract.interface';
 import { CreateErc20Dto } from './dto/create-erc20.dto';
 
 @Injectable()
 export class Erc20Service {
+  constructor(private readonly contractService: ContractService) {}
+
   createContract(createErc20Dto: CreateErc20Dto) {
-    const contractSource = readFileSync('./templates/ERC20.sol.template');
-    const contractTemplate = Handlebars.compile(contractSource.toString());
-    const contractOutput = contractTemplate(createErc20Dto);
-    const outputFilename = nanoid();
-    return outputFile(`./contracts/${outputFilename}.sol`, contractOutput);
+    return this.contractService.create({
+      data: createErc20Dto,
+      token: TokenType.ERC20,
+    });
   }
 }
