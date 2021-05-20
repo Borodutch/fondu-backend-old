@@ -10,7 +10,6 @@ export class Erc20Service {
     const contractSource = readFileSync('./templates/ERC20.sol.template');
     const contractTemplate = Handlebars.compile(contractSource.toString());
     const contractOutput = contractTemplate(createErc20Dto);
-
     const outputFilename = nanoid();
     return outputFile(`./contracts/${outputFilename}.sol`, contractOutput);
   }
