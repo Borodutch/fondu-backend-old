@@ -1,14 +1,14 @@
 {
   "name": "fondu-backend",
   "version": "0.0.1",
-  "description": "",
+  "description": "Fondu backend",
   "author": "Stanislav Nepomniashchikh",
   "private": true,
   "license": "MIT",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
-    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "format": "prettier --write \"src/**/*.ts\"",
     "start": "nest start",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
@@ -22,12 +22,20 @@
   },
   "dependencies": {
     "@nestjs/common": "^7.5.1",
+    "@nestjs/config": "^0.6.3",
     "@nestjs/core": "^7.5.1",
+    "@nestjs/mongoose": "^7.2.4",
     "@nestjs/platform-express": "^7.5.1",
-    "nestjs-ethers": "^0.3.0",
+    "@nestjs/terminus": "^7.2.0",
+    "@openzeppelin/contracts": "^4.1.0",
+    "fs-extra": "^10.0.0",
+    "helmet": "^4.6.0",
+    "mongoose": "^5.12.10",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
-    "rxjs": "^6.6.3"
+    "rxjs": "^6.6.3",
+    "solc": "^0.8.4",
+    "template-file": "^5.1.0"
   },
   "devDependencies": {
     "@nestjs/cli": "^7.5.1",
