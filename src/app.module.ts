@@ -17,7 +17,7 @@ import { join } from 'path';
     ConfigModule.forRoot(),
     ServeStaticModule.forRoot({
       rootPath: join(__dirname, '..', 'contracts'),
-      exclude: ['api'],
+      exclude: ['/api*'],
     }),
     MongooseModule.forRootAsync({
       imports: [ConfigModule],

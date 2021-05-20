@@ -3,7 +3,8 @@
 /node_modules
 
 # Contracts
-/contracts
+/contracts/*
+!/contracts/index.html
 
 # .env
 .env
