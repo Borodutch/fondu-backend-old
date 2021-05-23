@@ -28,6 +28,7 @@
     "@nestjs/platform-express": "^7.5.1",
     "@nestjs/serve-static": "^2.1.4",
     "@nestjs/terminus": "^7.2.0",
+    "@openzeppelin/cli": "^2.8.2",
     "@openzeppelin/contracts": "^4.1.0",
     "class-transformer": "^0.4.0",
     "class-validator": "^0.13.1",
@@ -39,7 +40,7 @@
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^6.6.3",
-    "solc": "^0.8.4"
+    "solc": "0.8.0"
   },
   "devDependencies": {
     "@nestjs/cli": "^7.5.1",

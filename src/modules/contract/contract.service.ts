@@ -12,8 +12,11 @@ export class ContractService {
     );
     const contractTemplate = Handlebars.compile(contractSource.toString());
     const contractOutput = contractTemplate(contract.data);
-    const outputFilename = `${nanoid()}.sol`;
-    outputFileSync(`./contracts/${outputFilename}`, contractOutput);
+    const outputFilename = nanoid();
+    outputFileSync(
+      `./contracts/${outputFilename}/${outputFilename}.sol`,
+      contractOutput,
+    );
     return outputFilename;
   }
 }

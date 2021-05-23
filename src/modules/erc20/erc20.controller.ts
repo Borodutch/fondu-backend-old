@@ -15,6 +15,6 @@ export class Erc20Controller {
   @Post()
   @UsePipes(new ValidationPipe())
   newErc20Contract(@Body() createErc20Dto: CreateErc20Dto) {
-    this.erc20Service.createContract(createErc20Dto);
+    return this.erc20Service.createContract(createErc20Dto);
   }
 }
